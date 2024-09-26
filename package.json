@@ -1,0 +1,15 @@
+{
+  "name": "clear",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Feyzullah Durasi",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
