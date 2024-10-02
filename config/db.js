@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
 
+// MongoDB bağlantı URL'sini tanımlayın
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
-        console.log('MongoDB Connected...');
-    } catch (err) {
-        console.error(err.message);
+        // MongoDB bağlantısını kurun
+        await mongoose.connect(process.env.MONGODB_URI);
+        console.log('MongoDB connected');
+    } catch (error) {
+        console.error(`Error: ${error.message}`);
         process.exit(1);
     }
 };
