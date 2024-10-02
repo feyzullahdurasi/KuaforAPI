@@ -1,11 +1,12 @@
 const Appointment = require('../models/Appointment');
 
+// Randevu oluşturma
 const createAppointment = async (req, res) => {
     const { barberId, date, service } = req.body;
 
     try {
         const appointment = new Appointment({
-            user: req.user.id,
+            user: req.user.id, // Kullanıcı kimliği
             barber: barberId,
             date,
             service
@@ -18,4 +19,7 @@ const createAppointment = async (req, res) => {
     }
 };
 
-module.exports = { createAppointment };
+// Modülü dışa aktar
+module.exports = {
+    createAppointment
+};

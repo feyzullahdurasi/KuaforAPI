@@ -1,5 +1,6 @@
 const Barber = require('../models/Barber');
 
+// Kuaförleri alma
 const getBarbers = async (req, res) => {
     try {
         const barbers = await Barber.find();
@@ -9,4 +10,7 @@ const getBarbers = async (req, res) => {
     }
 };
 
-module.exports = { getBarbers };
+// Modülü dışa aktar
+module.exports = {
+    getBarbers
+};

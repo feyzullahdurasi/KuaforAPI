@@ -2,6 +2,7 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+// Kullanıcı kaydı
 const register = async (req, res) => {
     const { name, email, password } = req.body;
 
@@ -24,6 +25,7 @@ const register = async (req, res) => {
     }
 };
 
+// Kullanıcı girişi
 const login = async (req, res) => {
     const { email, password } = req.body;
 
@@ -48,4 +50,8 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { register, login };
+// Modülleri dışa aktar
+module.exports = {
+    register,
+    login
+};
